@@ -33,10 +33,12 @@ export default function App() {
       content,
       logos
     });
+    document.body.classList.add('modal-open');
   };
 
   const closeModal = () => {
     setModalData(prev => ({ ...prev, isOpen: false }));
+    document.body.classList.remove('modal-open');
   };
 
   return (

@@ -37,8 +37,20 @@ export default function App() {
   };
 
   const closeModal = () => {
-    setModalData(prev => ({ ...prev, isOpen: false }));
-    document.body.classList.remove('modal-open');
+    // Ajouter la classe closing pour l'animation de fermeture
+    const modalElement = document.querySelector('.modal-overlay');
+    if (modalElement) {
+      modalElement.classList.add('closing');
+    }
+    
+    // Attendre la fin de l'animation avant de retirer les classes
+    setTimeout(() => {
+      setModalData(prev => ({ ...prev, isOpen: false }));
+      document.body.classList.remove('modal-open');
+      if (modalElement) {
+        modalElement.classList.remove('closing');
+      }
+    }, 500);
   };
 
   return (
@@ -51,7 +63,7 @@ export default function App() {
           <section id="about" className="section">
             <SectionTitle title="À propos" subtitle="Un profil hybride entre technique, projet et business." />
             <div className="glass card">
-              <p>{personal.summary}</p>
+              <div dangerouslySetInnerHTML={{ __html: personal.summary }} />
             </div>
           </section>
 

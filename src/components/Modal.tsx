@@ -34,7 +34,7 @@ export default function Modal({ isOpen, onClose, title, subtitle, content, logos
         )}
         
         <div className="modal-body">
-          <p>{content}</p>
+          <div dangerouslySetInnerHTML={{ __html: content }} />
         </div>
       </div>
     </div>

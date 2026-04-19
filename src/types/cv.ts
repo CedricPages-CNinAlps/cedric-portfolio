@@ -11,6 +11,7 @@ export interface LogoItem {
   type: 'icon' | 'image';
   content: string;
   alt?: string;
+  link?: string;
 }
 
 export interface Experience {

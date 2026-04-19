@@ -216,7 +216,7 @@ a {
 
 .card-content {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -228,8 +228,14 @@ a {
   min-width: 60px;
 }
 
-.card-right {
+.card-center {
   flex: 1;
+}
+
+.card-right {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
 }
 
 .card-logos {
@@ -244,10 +250,66 @@ a {
   color: var(--orange);
 }
 
+.card-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.card-icons i {
+  font-size: 1.2rem;
+  color: var(--orange);
+}
+
 .logo-image {
   width: 1.2rem;
   height: 1.2rem;
   object-fit: contain;
+}
+
+.card-company-logos {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  gap: 0.5rem;
+}
+
+.company-logo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  padding: 10px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-logo-link {
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.company-logo-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.company-logo-link .company-logo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  padding: 10px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Modal styles */
@@ -271,7 +333,7 @@ a {
   opacity: 1;
   visibility: visible;
   backdrop-filter: blur(8px);
-  animation: fadeInBackdrop 1s ease forwards;
+  animation: fadeInBackdrop 0.6s ease forwards;
 }
 
 .modal-content {
@@ -289,7 +351,15 @@ a {
 }
 
 .modal-overlay.open .modal-content {
-  animation: modalAppear 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  animation: modalAppear 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.modal-overlay.closing .modal-content {
+  animation: modalDisappear 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.modal-overlay.closing {
+  animation: fadeOutBackdrop 0.5s ease forwards;
 }
 
 /* Keyframes animations */
@@ -301,6 +371,17 @@ a {
   to {
     opacity: 1;
     backdrop-filter: blur(8px);
+  }
+}
+
+@keyframes fadeOutBackdrop {
+  from {
+    opacity: 1;
+    backdrop-filter: blur(8px);
+  }
+  to {
+    opacity: 0;
+    backdrop-filter: blur(0px);
   }
 }
 
@@ -317,6 +398,23 @@ a {
     transform: scale(1) rotateX(0deg);
     opacity: 1;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@keyframes modalDisappear {
+  0% {
+    transform: scale(1) rotateX(0deg);
+    opacity: 1;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  }
+  30% {
+    transform: scale(0.9) rotateX(-15deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(0) rotateX(-90deg) translateY(50px);
+    opacity: 0;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   }
 }
 
@@ -382,6 +480,46 @@ body.modal-open header {
 .modal-body p {
   line-height: 1.6;
   color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.modal-body h3 {
+  color: var(--orange);
+  margin: 1.5rem 0 0.8rem 0;
+  font-size: 1.2rem;
+}
+
+.modal-body h4 {
+  color: var(--text-secondary);
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.modal-body ul {
+  margin: 0.8rem 0 1.2rem 1.5rem;
+  padding: 0;
+}
+
+.modal-body li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.modal-body strong {
+  color: var(--orange);
+  font-weight: 600;
+}
+
+/* Style pour le strong dans le summary */
+.glass.card strong {
+  color: var(--orange);
+  font-weight: 600;
+}
+
+.modal-body em {
+  color: var(--text-secondary);
+  font-style: italic;
 }
 
 /* Card clickable styles */

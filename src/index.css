@@ -799,6 +799,11 @@ body.modal-open header {
     align-items: center;
   }
   
+  .education-card .card-right {
+    display: flex;
+    justify-content: center;
+  }
+  
   .education-card .card-center h3,
   .education-card .card-center h4 {
     text-align: center;

@@ -484,7 +484,9 @@ export const education: Education[] = [
         description: "Titre Professionnel Développeur Web Full Stack (RNCP Niveau 5 - Bac+2)",
         logos: [
             { type: 'icon', content: 'fas fa-code' },
-            { type: 'icon', content: 'fas fa-graduation-cap' }
+            { type: 'icon', content: 'fas fa-graduation-cap' },
+            { type: 'image', content: '/cedric-portfolio/images/education/campus-numerique.jpg', alt: 'Campus Numérique' },
+            { type: 'image', content: '/cedric-portfolio/images/education/cnam.png', alt: 'CNAM' }
         ],
         more: `
 <h3>Programme de formation</h3>
@@ -545,7 +547,8 @@ export const education: Education[] = [
         description: "Construire et suivre un projet sous MS Project 2010",
         logos: [
             { type: 'icon', content: 'fas fa-project-diagram' },
-            { type: 'icon', content: 'fas fa-chart-gantt' }
+            { type: 'icon', content: 'fas fa-chart-gantt' },
+            { type: 'image', content: '/cedric-portfolio/images/education/m2i.jpg', alt: 'M2i Formation' }
         ]
     },
     {
@@ -554,7 +557,9 @@ export const education: Education[] = [
         description: "Certificat Énergie Photovoltaïque (RNCP Niveau 7 - Master 1)",
         logos: [
             { type: 'icon', content: 'fas fa-solar-panel' },
-            { type: 'icon', content: 'fas fa-graduation-cap' }
+            { type: 'icon', content: 'fas fa-graduation-cap' },
+            { type: 'image', content: '/cedric-portfolio/images/education/ense3.svg', alt: 'ENSE3'},
+            { type: 'image', content: '/cedric-portfolio/images/education/cnam.png', alt: 'CNAM' }
         ],
         more: `
 <h3>Études photovoltaïques</h3>
@@ -579,7 +584,8 @@ export const education: Education[] = [
         description: "Titre RNCP Niveau 6 - Responsable Développement Marketing & Commercial International",
         logos: [
             { type: 'icon', content: 'fas fa-bullhorn' },
-            { type: 'icon', content: 'fas fa-chart-line' }
+            { type: 'icon', content: 'fas fa-chart-line' },
+            { type: 'image', content: '/cedric-portfolio/images/education/idrac.png', alt: 'IDRAC' }
         ],
         more: `
 <h3>Programme IDRAC</h3>
@@ -605,7 +611,8 @@ export const education: Education[] = [
         description: "DUT Génie Mécanique et Productique (RNCP Niveau 5 - Bac+2) - Parcours Sportif de Haut Niveau",
         logos: [
             { type: 'icon', content: 'fas fa-industry' },
-            { type: 'icon', content: 'fas fa-cogs' }
+            { type: 'icon', content: 'fas fa-cogs' },
+            { type: 'image', content: '/cedric-portfolio/images/education/IUT1.png', alt: 'IUT1' }
         ],
         more: `
 <h3>DUT Génie Mécanique</h3>
@@ -698,17 +705,22 @@ export const hobbies: Hobby[] = [
 export const projects: Project[] = [
     {
         name: "BackOffice Laravel + SPA Vue.js",
-        description:
-            "Interface sécurisée et front-office moderne pour la gestion de contenu et de processus métier."
+        description: "Interface sécurisée et front-office moderne pour la gestion de contenu et de processus métier.",
+        liveUrl: "https://groupe-mo.fr",
+        githubUrl: "https://github.com/cedric-pages/backoffice-laravel-vue",
+        technologies: ["Laravel", "Vue.js", "MySQL", "API REST", "JWT"]
     },
     {
         name: "Site e-commerce Prestashop",
-        description:
-            "Site compatible ERP CODIAL, avec optimisation des flux internes et du catalogue produit."
+        description: "Site compatible ERP CODIAL, avec optimisation des flux internes et du catalogue produit.",
+        liveUrl: "https://shop.groupe-mo.fr",
+        githubUrl: "https://github.com/cedric-pages/ecommerce-prestashop",
+        technologies: ["Prestashop", "PHP", "MySQL", "ERP Integration", "Payment APIs"]
     },
     {
         name: "Automatisations Python / VBA",
-        description:
-            "Scripts et micro-outils pour l'import de données, la gestion de tarifs et le traitement de fichiers."
+        description: "Scripts et micro-outils pour l'import de données, la gestion de tarifs et le traitement de fichiers.",
+        // githubUrl: "https://github.com/cedric-pages/automations-python-vba",
+        technologies: ["Python", "VBA", "Excel", "Data Processing", "Automation"]
     }
 ];

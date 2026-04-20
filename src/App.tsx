@@ -7,6 +7,7 @@ import EducationCard from "./components/EducationCard";
 import HobbyCard from "./components/HobbyCard";
 import Contact from "./components/Contact";
 import Modal from "./components/Modal";
+import ProjectCard from "./components/ProjectCard";
 import { useState } from "react";
 import { personal, skills, experiences, education, hobbies, projects } from "./data/cvData";
 import "./index.css";
@@ -115,10 +116,7 @@ export default function App() {
             <SectionTitle title="Projets" subtitle="Quelques réalisations représentatives." />
             <div className="grid projects">
               {projects.map((project: any) => (
-                  <article className="glass card" key={project.name}>
-                    <h3>{project.name}</h3>
-                    <p>{project.description}</p>
-                  </article>
+                  <ProjectCard key={project.name} {...project} />
               ))}
             </div>
           </section>

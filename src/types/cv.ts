@@ -26,6 +26,9 @@ export interface Experience {
 export interface Project {
   name: string;
   description: string;
+  liveUrl?: string;
+  githubUrl?: string;
+  technologies?: string[];
 }
 
 export interface Skill {

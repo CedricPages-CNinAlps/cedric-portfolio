@@ -607,6 +607,95 @@ body.modal-open header {
   align-items: stretch;
 }
 
+/* Project Card Styles */
+.project-card {
+  padding: 1.5rem;
+  position: relative;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.project-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--text);
+  flex: 1;
+}
+
+.project-links {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.project-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.live-link:hover {
+  background: var(--orange);
+  color: white;
+  border-color: var(--orange);
+}
+
+.github-link:hover {
+  background: #333;
+  color: white;
+  border-color: #333;
+}
+
+.project-description {
+  margin: 0 0 1rem 0;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tech-tag {
+  background: rgba(249, 115, 22, 0.1);
+  color: var(--orange);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid rgba(249, 115, 22, 0.2);
+  transition: all 0.2s ease;
+}
+
+.tech-tag:hover {
+  background: rgba(249, 115, 22, 0.2);
+  transform: translateY(-1px);
+}
+
 .contact-card p {
   margin: 0 0 0.7rem;
 }
@@ -846,6 +935,40 @@ body.modal-open header {
   
   .experience-card .card-content p {
     font-size: 0.9rem;
+  }
+  
+  /* Project Card Mobile Styles */
+  .project-card {
+    padding: 1.25rem;
+  }
+  
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .project-header h3 {
+    font-size: 1.1rem;
+  }
+  
+  .project-links {
+    align-self: flex-end;
+  }
+  
+  .project-link {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 1rem;
+  }
+  
+  .project-description {
+    font-size: 0.9rem;
+  }
+  
+  .tech-tag {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
   }
 }
 

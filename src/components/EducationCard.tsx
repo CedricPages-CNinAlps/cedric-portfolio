@@ -6,7 +6,7 @@ interface EducationCardProps extends Education {
 
 export default function EducationCard({ period, school, description, logos, more, onClick }: EducationCardProps) {
     return (
-        <article className={`glass card experience-card ${more ? 'clickable' : ''}`} onClick={more ? onClick : undefined}>
+        <article className={`glass card education-card ${more ? 'clickable' : ''}`} onClick={more ? onClick : undefined}>
             <div className="card-content">
                 <div className="card-left">
                     {logos && logos.length > 0 && (
@@ -22,7 +22,7 @@ export default function EducationCard({ period, school, description, logos, more
                         </div>
                     )}
                 </div>
-                <div className="card-right">
+                <div className="card-center">
                     <div className="period">{period}</div>
                     <h3>{description}</h3>
                     <h4>{school}</h4>

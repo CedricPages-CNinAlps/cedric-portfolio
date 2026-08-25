@@ -32,7 +32,7 @@ export default function ProjectCard({ name, description, liveUrl, githubUrl, tec
             </div>
             
             <p className="project-description">{description}</p>
-            
+
             {technologies && technologies.length > 0 && (
                 <div className="project-technologies">
                     {technologies.map((tech, index) => (

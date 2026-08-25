@@ -872,8 +872,8 @@ body.modal-open header {
   }
   
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 0.75rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
   
   .skill-icon {
@@ -945,12 +945,48 @@ body.modal-open header {
   /* Project Card Mobile Styles */
   .project-card {
     padding: 1.25rem;
+    text-align: center;
   }
   
   .project-header {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .project-links {
+    align-self: center;
+  }
+  
+  /* Center all card content */
+  .card {
+    text-align: center;
+  }
+  
+  .card-icons {
+    align-items: center;
+  }
+  
+  .card-company-logos {
+    justify-content: center;
+  }
+  
+  .card-logos {
+    justify-content: center;
+  }
+  
+  /* Responsive thumbnails */
+  .thumbnail-image {
+    max-height: 150px;
+  }
+  
+  .thumbnail-loading,
+  .website-thumbnail-fallback {
+    height: 150px;
+  }
+  
+  .project-thumbnail {
+    margin: 0.75rem 0;
   }
   
   .project-header h3 {
@@ -958,7 +994,7 @@ body.modal-open header {
   }
   
   .project-links {
-    align-self: flex-end;
+    align-self: center;
   }
   
   .project-link {

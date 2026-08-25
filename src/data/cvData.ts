@@ -707,20 +707,17 @@ export const projects: Project[] = [
         name: "BackOffice Laravel + SPA Vue.js",
         description: "Interface sécurisée et front-office moderne pour la gestion de contenu et de processus métier.",
         liveUrl: "https://groupe-mo.fr",
-        githubUrl: "https://github.com/cedric-pages/backoffice-laravel-vue",
         technologies: ["Laravel", "Vue.js", "MySQL", "API REST", "JWT"]
     },
     {
         name: "Site e-commerce Prestashop",
         description: "Site compatible ERP CODIAL, avec optimisation des flux internes et du catalogue produit.",
         liveUrl: "https://shop.groupe-mo.fr",
-        githubUrl: "https://github.com/cedric-pages/ecommerce-prestashop",
         technologies: ["Prestashop", "PHP", "MySQL", "ERP Integration", "Payment APIs"]
     },
     {
         name: "Automatisations Python / VBA",
         description: "Scripts et micro-outils pour l'import de données, la gestion de tarifs et le traitement de fichiers.",
-        // githubUrl: "https://github.com/cedric-pages/automations-python-vba",
         technologies: ["Python", "VBA", "Excel", "Data Processing", "Automation"]
     }
 ];
